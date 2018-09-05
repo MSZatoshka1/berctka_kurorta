@@ -1,46 +1,3 @@
-header {
-  width: 100%;
-  background-image: url('../img/bg-nav.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 90vh;
-}
-
-nav {
-  padding-top: 20px;
-}
-
-nav ul {
-  justify-content: space-between;
-}
-
-nav ul li a {
-  position: relative;
-  font-size: 1.5rem;
-  color: #0784c5;
-  transition: all 1.2s ease-out;
-}
-
-nav ul li a::after {
-  content: "";
-  display: block;
-  height: 3px;
-  position: absolute;
-  right: 0;
-  bottom: -5px;
-  width: 20px;
-  transition: all 0.8s ease-out;
-}
-
-nav ul li a:hover {
-  color: #c50101;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-  background-color: #c50101;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -84,9 +41,161 @@ a {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 560px) {
-  .wrapper {
-    padding-left: 10px;
-    padding-right: 10px;
+header {
+  background-image: url('../img/bg-nav.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+header .header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header .header #logo {
+  font-family: "HeliosExtThin";
+  text-transform: uppercase;
+  padding-top: 50px;
+}
+
+header .header #logo .name {
+  font-size: 72px;
+  letter-spacing: 1.8px;
+  text-shadow: 4px 7px 8px rgba(0, 0, 0, 0.75);
+  color: #fcff24;
+  margin-bottom: 10px;
+}
+
+header .header #logo .opicanie {
+  text-align: center;
+  font-size: 1.375rem;
+  letter-spacing: 0.6px;
+}
+
+header .header #reklama {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Georgia";
+  font-size: 1.875rem;
+  flex-direction: column;
+  background-image: linear-gradient(to left, #bd2d09 0%, #f2e527 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-top: 100px;
+}
+
+header .header #reklama .word {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+nav {
+  padding-top: 20px;
+}
+
+nav ul {
+  justify-content: space-between;
+}
+
+nav ul li a {
+  position: relative;
+  font-size: 1.5rem;
+  color: #0784c5;
+  transition: all 1.2s ease-out;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 20px;
+  transition: all 0.8s ease-out;
+}
+
+nav ul li a:hover {
+  color: #c50101;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  background-color: #c50101;
+}
+
+@media screen and (max-width: 980px) {
+  html {
+    font-size: 15px;
+  }
+
+  header {
+    position: relative;
+    height: 80vh;
+  }
+
+  header .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header .header #logo {
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  header .header #reklama {
+    padding-top: 0;
+    position: absolute;
+    bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  html {
+    font-size: 13px;
+  }
+
+  header {
+    height: 60vh;
+  }
+
+  header .header #logo .name {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 11px;
+  }
+
+  header {
+    background-image: url('../img/bg-nav.sm.png');
+  }
+
+  header .header {
+    align-items: flex-end;
+  }
+
+  header .header #reklama {
+    align-self: center;
+    bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 9px;
+  }
+
+  header {
+    height: 40vh;
+  }
+
+  header .header #logo .name {
+    font-size: 33px;
   }
 }

@@ -1,5 +1,4 @@
 @import 'smart-grid.less';
-@import 'header.less';
 .reset();
 .wrapper{
     .wrapper();
@@ -8,5 +7,20 @@
     .row();
 }
 
+html{
+    .lg-block({
+        font-size: 15px;
+    }); 
+    .md-block({
+        font-size: 13px;
+    });
+    .sm-block({
+        font-size: 11px;
+    });
+    .xs-block({
+        font-size: 9px;
+    });
+}
 
-
+@import 'header.less';
+@import 'nav.less';

@@ -1,39 +1,96 @@
 header{
-    width: 100%;
     background-image: url('../img/bg-nav.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 90vh;
-}
-nav{
-    padding-top: 20px;
-    ul{
-        justify-content: space-between;
-        li{
-            a{
-                position: relative;
-                .fz(24);
-                color: #0784c5;
-                transition: all  1.2s ease-out;
-                &::after{
-                    content: "";
-                    display: block;
-                    height: 3px;
-                    position: absolute;
-                    right: 0;
-                    bottom: -5px;
-                    width: 20px;
-                    transition: all  0.8s ease-out;
-                }
-                &:hover{
-                    color: #c50101;
-                     &::after{
-                         width: 100%;
-                         background-color: #c50101;
-                     }
-                }
+    // --адаптивка header
+    .lg-block({
+        position: relative;
+        height: 80vh;
+    });
+    .md-block({
+        height: 60vh;
+    });
+    .sm-block({
+        background-image: url('../img/bg-nav.sm.png');
+    });
+    .xs-block({
+        height: 40vh;
+    });
+
+
+     .header{
+         .row();
+         justify-content: space-between;
+          // --адаптивка .header
+         .lg-block({
+             flex-direction: column;
+             align-items: flex-start;
+         });
+         .sm-block({
+            align-items: flex-end;
+         });
+
+         #logo{
+            font-family: "HeliosExtThin";
+            text-transform: uppercase;
+            padding-top: 50px;
+            // --адаптивка #logo
+            .lg-block({
+                 text-align: center;
+                 padding-top: 30px; 
+            });
+
+            .name{
+                font-size: 72px;
+                letter-spacing: 1.8px;
+                text-shadow: 4px 7px 8px rgba(0, 0, 0, 0.75);
+                color: #fcff24;
+                margin-bottom: 10px;
+                // --адаптивка .name
+                .md-block({
+                    font-size: 40px; 
+                });
+                .xs-block({
+                    font-size: 33px; 
+                });
             }
-        }
-    }
+
+            .opicanie{
+                text-align: center;
+                .fz(22);
+                letter-spacing: 0.6px;
+            }
+         }
+         
+        #reklama{
+            .row();
+            font-family:"Georgia";
+            .fz(30);
+            flex-direction: column;
+            background-image: linear-gradient(to left, #bd2d09 0%, #f2e527 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            padding-top: 100px;
+            .word{
+                text-align: center;
+                margin-bottom: 10px;
+            }
+             // --адаптивка #reklama
+            .lg-block({
+                padding-top: 0;
+                position: absolute;
+                bottom: 50px;
+            });
+            .sm-block({
+                align-self: center;
+                bottom: 25px;
+            });
+         }
+     }
 }
+
+
+
+
  

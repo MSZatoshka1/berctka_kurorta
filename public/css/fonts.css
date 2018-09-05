@@ -1,0 +1,9 @@
+@font-face{
+    font-family: "HeliosExtThin";
+    src:url('../fonts/HeliosExtThin.otf')format("truetype");  
+}
+@font-face{
+    font-family: "Georgia";
+    src:url('../fonts/georgia.ttf')format("truetype");  
+}
+
