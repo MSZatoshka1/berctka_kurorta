@@ -1,0 +1,1 @@
+# berctka_kurorta
