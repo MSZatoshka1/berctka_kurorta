@@ -1,0 +1,39 @@
+header{
+    width: 100%;
+    background-image: url('../img/bg-nav.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+nav{
+    padding-top: 20px;
+    ul{
+        justify-content: space-between;
+        li{
+            a{
+                position: relative;
+                .fz(24);
+                color: #0784c5;
+                transition: all  1.2s ease-out;
+                &::after{
+                    content: "";
+                    display: block;
+                    height: 3px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -5px;
+                    width: 20px;
+                    transition: all  0.8s ease-out;
+                }
+                &:hover{
+                    color: #c50101;
+                     &::after{
+                         width: 100%;
+                         background-color: #c50101;
+                     }
+                }
+            }
+        }
+    }
+}
+ 

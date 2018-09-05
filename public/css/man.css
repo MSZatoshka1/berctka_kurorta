@@ -1,3 +1,46 @@
+header {
+  width: 100%;
+  background-image: url('../img/bg-nav.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+
+nav {
+  padding-top: 20px;
+}
+
+nav ul {
+  justify-content: space-between;
+}
+
+nav ul li a {
+  position: relative;
+  font-size: 1.5rem;
+  color: #0784c5;
+  transition: all 1.2s ease-out;
+}
+
+nav ul li a::after {
+  content: "";
+  display: block;
+  height: 3px;
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: 20px;
+  transition: all 0.8s ease-out;
+}
+
+nav ul li a:hover {
+  color: #c50101;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  background-color: #c50101;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -27,4 +70,23 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 560px) {
+  .wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
