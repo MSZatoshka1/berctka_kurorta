@@ -1,12 +1,38 @@
 
 nav{
+    position: relative;
     padding-top: 20px;
+    // // адапитивка nav
+    .md-block({
+        display: none;
+    });
+    .sm-block({
+        display: block;
+    });
     ul{
         justify-content: space-between;
+        // адапитивка nav ul
+        .md-block({
+            flex-direction: column;
+            align-items: flex-end;
+        });
+        .sm-block({
+            padding: 20px 0px;
+            border-bottom: 2px solid #0784c5;
+            border-top: 2px solid #0784c5;
+            align-items: center;
+        });
         li{
+            // адапитивка nav ul li
+            .md-block({
+                margin-bottom: 15px;
+            }); 
+
             a{
+                font-weight: 400;
+                font-family: "Adventure";
                 position: relative;
-                .fz(24);
+                .fz(22);
                 color: #0784c5;
                 transition: all  1.2s ease-out;
                 &::after{
@@ -26,8 +52,25 @@ nav{
                          background-color: #c50101;
                      }
                 }
+                // - адаптивка nav ul li a
+                .sm-block({
+                    .fz(30);
+                });
+
             }
         }
+    }
+    .krectik{
+        display: none;
+        color: red;
+        font-family: "FontAwesome";
+        font-size: 20px;
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        .sm-block({
+            display: block;
+        });
     }
 }
  

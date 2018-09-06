@@ -91,7 +91,12 @@ header .header #reklama .word {
   margin-bottom: 10px;
 }
 
+header nav {
+  display: none;
+}
+
 nav {
+  position: relative;
   padding-top: 20px;
 }
 
@@ -100,8 +105,10 @@ nav ul {
 }
 
 nav ul li a {
+  font-weight: 400;
+  font-family: "Adventure";
   position: relative;
-  font-size: 1.5rem;
+  font-size: 1.375rem;
   color: #0784c5;
   transition: all 1.2s ease-out;
 }
@@ -124,6 +131,16 @@ nav ul li a:hover {
 nav ul li a:hover::after {
   width: 100%;
   background-color: #c50101;
+}
+
+nav .krectik {
+  display: none;
+  color: red;
+  font-family: "FontAwesome";
+  font-size: 20px;
+  position: absolute;
+  right: 30px;
+  top: 30px;
 }
 
 @media screen and (max-width: 980px) {
@@ -165,6 +182,23 @@ nav ul li a:hover::after {
   header .header #logo .name {
     font-size: 40px;
   }
+
+  header nav {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  nav ul li {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -183,6 +217,29 @@ nav ul li a:hover::after {
   header .header #reklama {
     align-self: center;
     bottom: 25px;
+  }
+
+  header nav {
+    display: none;
+  }
+
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    padding: 20px 0px;
+    border-bottom: 2px solid #0784c5;
+    border-top: 2px solid #0784c5;
+    align-items: center;
+  }
+
+  nav ul li a {
+    font-size: 1.875rem;
+  }
+
+  nav .krectik {
+    display: block;
   }
 }
 
