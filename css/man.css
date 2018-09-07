@@ -49,6 +49,64 @@ a {
   margin-right: -10px;
 }
 
+footer {
+  margin-bottom: 10px;
+}
+
+footer .row {
+  justify-content: space-between;
+}
+
+footer .row::before {
+  margin: 0px 0px 20px;
+  width: 100%;
+  display: block;
+  content: "";
+  border-bottom: 1px solid #000;
+}
+
+footer .row .adrec {
+  width: calc(25% - 20px);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+footer .row .adrec a {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+footer .row .tlf_nomer p {
+  font-size: 14px;
+}
+
+footer .row .tlf_nomer p.date {
+  margin-bottom: 20px;
+}
+
+footer .row .tlf_nomer p.pyt {
+  margin-top: 10px;
+}
+
+footer .row .tlf_nomer .nomer {
+  font-size: 1.375rem;
+  line-height: 1.625rem;
+}
+
+footer .row .sait {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+footer .row .sait #cobaka {
+  margin-top: 30px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
 section .row_flex {
   justify-content: center;
 }
@@ -162,15 +220,7 @@ aside .countries ul.strans li a:hover {
 }
 
 aside .novost {
-  margin-bottom: 40px;
-}
-
-aside .statia a.full_statia {
-  margin-top: 40px;
-  font-size: 18px;
-  text-align: right;
-  margin-right: 30px;
-  text-decoration: none;
+  margin-bottom: 50px;
 }
 
 aside .name {
@@ -195,6 +245,10 @@ aside .full {
   font-family: "Arial";
 }
 
+aside .full .block {
+  margin-bottom: 15px;
+}
+
 aside .full a {
   text-decoration: underline;
   color: #0784c5;
@@ -204,8 +258,11 @@ aside .full a {
   margin-right: 15px;
 }
 
-aside .full .block {
-  margin-bottom: 15px;
+aside .full a.full_a {
+  text-decoration: none;
+  margin-top: 40px;
+  font-size: 18px;
+  margin-right: 35px;
 }
 
 header {
@@ -343,6 +400,10 @@ nav .krectik {
     font-size: 13px;
   }
 
+  footer .row .adrec {
+    font-size: 12px;
+  }
+
   section {
     margin-top: 50px;
   }
@@ -400,6 +461,23 @@ nav .krectik {
 @media screen and (max-width: 580px) {
   html {
     font-size: 11px;
+  }
+
+  footer .row {
+    justify-content: center;
+  }
+
+  footer .row > div {
+    width: calc(66.66666666666667% - 20px);
+  }
+
+  footer .row > div {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  footer .row .adrec {
+    width: calc(66.66666666666667% - 20px);
   }
 
   article {
