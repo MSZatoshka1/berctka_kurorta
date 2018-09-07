@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 table {
@@ -39,6 +40,172 @@ a {
 .row {
   display: flex;
   flex-wrap: wrap;
+}
+
+.row_flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+section .row_flex {
+  justify-content: center;
+}
+
+section .getaside {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  left: 20px;
+  font-family: "FontAwesome";
+  font-size: 30px;
+}
+
+article {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(66.66666666666667% - 20px);
+  margin-left: calc(8.333333333333334% + 10px);
+}
+
+article .name_countries {
+  font-family: "Arial";
+  font-size: 1.5rem;
+  color: #fcb163;
+  margin-bottom: 30px;
+}
+
+article .row_flex {
+  justify-content: center;
+}
+
+article .row_flex .block {
+  margin-bottom: 45px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.333333333333336% - 20px);
+}
+
+article .row_flex .block .img img {
+  min-width: 100%;
+}
+
+article .row_flex .name {
+  margin-top: 10px;
+  font-family: "Academia";
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+article .row_flex .name::after,
+article .row_flex .name::before {
+  margin: 0 5px;
+  vertical-align: middle;
+  display: inline-block;
+  content: "";
+  width: 35px;
+  height: 5px;
+  background-image: url("../img/linia.png");
+  background-repeat: no-repeat;
+}
+
+article .opicanie p {
+  font-family: "Arial";
+  margin-bottom: 15px;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+}
+
+article .opicanie p:last-child {
+  margin-bottom: 0;
+}
+
+aside {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+}
+
+aside .countries {
+  position: relative;
+  margin-bottom: 30px;
+  letter-spacing: 2.4px;
+}
+
+aside .countries .img {
+  text-align: center;
+  background-color: #0897e1;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+aside .countries ul.strans {
+  margin-left: 30px;
+}
+
+aside .countries ul.strans li {
+  line-height: 30px;
+}
+
+aside .countries ul.strans li a {
+  font-family: "Arial";
+  font-size: 1.25rem;
+  color: #000;
+}
+
+aside .countries ul.strans li a.activ,
+aside .countries ul.strans li a:hover {
+  color: #0784c5;
+}
+
+aside .novost {
+  margin-bottom: 40px;
+}
+
+aside .statia a.full_statia {
+  margin-top: 40px;
+  font-size: 18px;
+  text-align: right;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+aside .name {
+  margin-bottom: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #fcb163;
+}
+
+aside .name::after {
+  margin: 10px 20px 0px;
+  display: block;
+  content: "";
+  border-bottom: 1px solid #000;
+}
+
+aside .full {
+  font-size: 14px;
+  padding-left: 5px;
+  border-left: 1px solid #2dd9fc;
+  font-family: "Arial";
+}
+
+aside .full a {
+  text-decoration: underline;
+  color: #0784c5;
+  margin-top: 15px;
+  display: block;
+  text-align: right;
+  margin-right: 15px;
+}
+
+aside .full .block {
+  margin-bottom: 15px;
 }
 
 header {
@@ -96,6 +263,7 @@ header nav {
 }
 
 nav {
+  margin-bottom: 70px;
   position: relative;
   padding-top: 20px;
 }
@@ -175,6 +343,34 @@ nav .krectik {
     font-size: 13px;
   }
 
+  section {
+    margin-top: 50px;
+  }
+
+  section .getaside {
+    display: block;
+  }
+
+  article {
+    width: calc(91.66666666666667% - 20px);
+  }
+
+  article {
+    margin-left: calc(8.333333333333334% + 10px);
+  }
+
+  article .name_countries {
+    text-align: center;
+  }
+
+  article .row_flex .block {
+    width: calc(41.66666666666667% - 20px);
+  }
+
+  aside {
+    display: none;
+  }
+
   header {
     height: 60vh;
   }
@@ -204,6 +400,18 @@ nav .krectik {
 @media screen and (max-width: 580px) {
   html {
     font-size: 11px;
+  }
+
+  article {
+    width: calc(83.33333333333334% - 20px);
+  }
+
+  article {
+    margin-left: calc(16.666666666666668% + 10px);
+  }
+
+  article .row_flex .block {
+    width: calc(58.333333333333336% - 20px);
   }
 
   header {
@@ -243,9 +451,9 @@ nav .krectik {
   }
 }
 
-@media screen and (max-width: 320px) {
-  html {
-    font-size: 9px;
+@media screen and (max-width: 400px) {
+  article .row_flex .block {
+    width: calc(75% - 20px);
   }
 
   header {

@@ -1,0 +1,63 @@
+article{
+    .col();
+    .size(8);
+    .size-md(11);
+    .size-sm(10);
+    .shift-left(1);
+    .shift-md-left(1);
+    .shift-sm-left(2);
+    .name_countries{
+        font-family: "Arial";
+        .fz(24);
+        color: #fcb163;
+        margin-bottom: 30px;
+        // text-align: center;
+        .md-block({
+            text-align: center;
+        });
+
+    }
+    .row_flex{
+        justify-content: center;
+        .block{
+            margin-bottom: 45px;
+            .col();
+            .size(4);
+            .size-md(5);
+            .size-sm(7);
+            .size-xs(9);
+
+            .img{
+                img{
+                    min-width: 100%;
+                }
+            }
+        }
+
+        .name{
+            margin-top: 10px;
+            font-family: "Academia";
+            text-align: center;
+            .fz(20);
+            &::after , &::before{
+                margin: 0 5px;
+                vertical-align: middle;
+                display: inline-block;
+                content: "";
+                width: 35px;
+                height: 5px;
+                background-image: url("../img/linia.png");
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    .opicanie p {
+        font-family: "Arial";
+        margin-bottom: 15px;
+        .fz(14);
+        .lh(18);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}

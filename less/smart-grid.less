@@ -1,11 +1,11 @@
-@columns: 11;
+@columns: 12;
 @atom: (100% / @columns);
 @max-width: 1100px;
 
 @break_lg: 980px;
 @break_md: 780px;
 @break_sm: 580px;
-@break_xs: 320px;
+@break_xs: 400px;
 
 @offset: 20px;
 @offset_lg: @offset;
@@ -24,6 +24,9 @@
 
 .fz(@fz){
     font-size:  (@fz / 16px *1rem);
+}
+.lh(@lh){
+    line-height: (@lh/16 * 1rem);
 }
 
 .wrapper-full(){
@@ -302,6 +305,7 @@
     *{
         margin: 0;
         padding: 0;
+        box-sizing: border-box;
     }
     table{
         border-collapse: collapse;
